@@ -1,0 +1,277 @@
+{
+  "avg_faithfulness": 5.0,
+  "avg_relevance": 5.0,
+  "questions_evaluated": 15,
+  "results": [
+    {
+      "question": "What does BERT stand for?",
+      "ground_truth": "BERT stands for Bidirectional Encoder Representations from Transformers, a language representation model introduced by Google AI Language.",
+      "generated_answer": "BERT stands for **Bidirectional Encoder Representations from Transformers**\u3010source: BERT (Bidirectional language understanding).pdf, Page\u202f1\u3011.",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately and directly identifies what the acronym BERT stands for, matching the ground truth perfectly.",
+      "sources": [
+        "BERT (Bidirectional language understanding).pdf p15",
+        "BERT (Bidirectional language understanding).pdf p15",
+        "BERT (Bidirectional language understanding).pdf p1",
+        "BERT (Bidirectional language understanding).pdf p1",
+        "BERT (Bidirectional language understanding).pdf p15",
+        "BERT (Bidirectional language understanding).pdf p1",
+        "BERT (Bidirectional language understanding).pdf p15",
+        "BERT (Bidirectional language understanding).pdf p3"
+      ]
+    },
+    {
+      "question": "What are the two pre-training tasks used in BERT?",
+      "ground_truth": "BERT is pre-trained using two unsupervised tasks: Masked Language Model (MLM), where 15% of tokens are randomly masked and the model predicts them, and Next Sentence Prediction (NSP), where the model predicts whether two sentences follow each other.",
+      "generated_answer": "The two pre\u2011training tasks used in BERT are:\n\n1. **Masked Language Modeling (MLM)** \u2013 the model predicts randomly masked tokens in the input sequence.  \n2. **Next Sentence Prediction (NSP)** \u2013 the model determines whether a second sentence follows the first one in the original text.\n\nThese two unsupervised objectives are described as the core pre\u2011training tasks for BERT\u202f[5, page\u202f8][2, page\u202f12].",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately and directly identifies both Masked Language Modeling and Next Sentence Prediction as the two pre-training tasks for BERT, matching the ground truth perfectly.",
+      "sources": [
+        "BERT (Bidirectional language understanding).pdf p4",
+        "BERT (Bidirectional language understanding).pdf p12",
+        "BERT (Bidirectional language understanding).pdf p3",
+        "BERT (Bidirectional language understanding).pdf p2",
+        "BERT (Bidirectional language understanding).pdf p8",
+        "BERT (Bidirectional language understanding).pdf p8",
+        "BERT (Bidirectional language understanding).pdf p14",
+        "BERT (Bidirectional language understanding).pdf p4"
+      ]
+    },
+    {
+      "question": "What are the two model sizes of BERT?",
+      "ground_truth": "BERT comes in two sizes: BERT BASE with L=12 layers, H=768 hidden size, A=12 attention heads and 110M parameters, and BERT LARGE with L=24 layers, H=1024 hidden size, A=16 attention heads and 340M parameters.",
+      "generated_answer": "The two model sizes of BERT are **BERTBASE** and **BERTLARGE**\u3010source: BERT (Bidirectional language understanding).pdf, Page 3\u3011.",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately and directly identifies the two model sizes of BERT in accordance with the ground truth.",
+      "sources": [
+        "BERT (Bidirectional language understanding).pdf p3",
+        "BERT (Bidirectional language understanding).pdf p3",
+        "BERT (Bidirectional language understanding).pdf p6",
+        "BERT (Bidirectional language understanding).pdf p3",
+        "BERT (Bidirectional language understanding).pdf p8",
+        "BERT (Bidirectional language understanding).pdf p6",
+        "BERT (Bidirectional language understanding).pdf p8",
+        "BERT (Bidirectional language understanding).pdf p7"
+      ]
+    },
+    {
+      "question": "What is the attention mechanism in the Transformer?",
+      "ground_truth": "An attention function maps a query and a set of key-value pairs to an output, where the output is computed as a weighted sum of the values, and the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.",
+      "generated_answer": "The Transformer\u2019s core is an **attention mechanism** that replaces recurrent and convolutional layers.  \nIt allows every token in a sequence to \u201clook at\u201d all other tokens, computing weighted sums of their representations.  \nIn the paper this is implemented as **scaled\u2011dot\u2011product attention** and extended to **multi\u2011head attention**, which is used in three forms:\n\n* **Self\u2011attention** within each encoder or decoder layer, letting a token attend to the rest of the same sequence.  \n* **Encoder\u2011decoder attention**, where the decoder queries the encoder outputs.  \n* **Multi\u2011head attention** in both of the above, enabling the model to capture information from multiple representation sub\u2011spaces simultaneously.\n\nThis attention mechanism is the sole computational primitive of the Transformer, allowing it to model global dependencies between input and output without any recurrence or convolution.  \n\n[1] (Attention is All You Need, p.\u202f2) \u2013 \u201crelying entirely on an attention mechanism to draw global dependencies between input and output.\u201d  \n[5] (Attention is All You Need, p.\u202f5) \u2013 \u201cThe Transformer uses multi\u2011head attention in three different ways.\u201d  \n[6] (Attention is All You Need, p.\u202f2) \u2013 \u201ceschewing recurrence and instead relying entirely on an attention mechanism \u2026.\u201d",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer provides a highly accurate, comprehensive, and directly relevant explanation of the Transformer's attention mechanism that is completely faithful to the factual concept described in the ground truth.",
+      "sources": [
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p2",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p1",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p1",
+        "BERT (Bidirectional language understanding).pdf p5",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p5",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p2",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p3",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p10"
+      ]
+    },
+    {
+      "question": "What is Scaled Dot-Product Attention?",
+      "ground_truth": "Scaled Dot-Product Attention takes queries and keys of dimension dk and values of dimension dv, computes the dot products of the query with all keys, divides each by the square root of dk, and applies a softmax function to obtain the weights on the values. The formula is: Attention(Q,K,V) = softmax(QK^T / sqrt(dk))V.",
+      "generated_answer": "Scaled\u202fDot\u2011Product Attention is the basic attention operation used in the Transformer.  \nGiven query vectors **Q**, key vectors **K**, and value vectors **V** (each of dimension \\(d_k\\) for the queries/keys and \\(d_v\\) for the values), the algorithm\n\n1. computes the dot products of every query with every key,  \n2. scales the resulting scores by \\(1/\\sqrt{d_k}\\) to keep them in a numerically stable range,  \n3. applies the softmax function to the scaled scores, producing a weight distribution over the keys, and  \n4. multiplies these weights with the values to produce the final output.\n\nThus, Scaled\u202fDot\u2011Product Attention is:  \n\n\\[\n\\text{Attention}(Q,K,V)=\\operatorname{softmax}\\!\\left(\\frac{QK^{\\top}}{\\sqrt{d_k}}\\right)V\n\\]\n\nThis scaling factor distinguishes it from plain dot\u2011product attention, which can produce very large values for large \\(d_k\\) and push the softmax into saturated regions.  \n\n[source: *Attention is All You Need* (Transformers \u2014 the foundation of everything).pdf, page\u202f4]",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer provides an accurate, step-by-step explanation and formula for Scaled Dot-Product Attention that aligns perfectly with the ground truth.",
+      "sources": [
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4"
+      ]
+    },
+    {
+      "question": "What is multi-head attention?",
+      "ground_truth": "Multi-head attention linearly projects queries, keys and values h times with different learned projections, performs attention in parallel on each projection yielding dv-dimensional output values, then concatenates and projects the results. The Transformer uses h=8 parallel attention heads.",
+      "generated_answer": "**Multi\u2011head attention** is a layer that runs several scaled\u2011dot\u2011product attention mechanisms in parallel, each on a different linear projection of the input.  \nFor a given set of queries \\(Q\\), keys \\(K\\), and values \\(V\\),\n\n\\[\n\\text{MultiHead}(Q,K,V)=\\text{Concat}(\\text{head}_1,\\dots,\\text{head}_h)\\,W^O ,\n\\qquad\n\\text{head}_i=\\text{Attention}\\bigl(QW^{Q}_i,\\;KW^{K}_i,\\;VW^{V}_i\\bigr)\n\\]\n\nwhere \\(W^Q_i, W^K_i, W^V_i\\) project \\(Q,K,V\\) into the \\(i\\)-th sub\u2011space.  \nThe heads run in parallel, the results are concatenated, and a final linear transformation \\(W^O\\) produces the output.\n\nThis design lets the model **jointly attend to information from different representation subspaces at different positions**; with a single attention head the averaging of these sub\u2011spaces would hinder such diversity.  \n\n\u2014 [Attention is All You Need (Transformers \u2014 the foundation of everything).pdf, Page\u202f4]  \n\u2014 [Attention is All You Need (Transformers \u2014 the foundation of everything).pdf, Page\u202f5]",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer provides a precise and mathematically accurate explanation of multi-head attention that is fully consistent with the ground truth.",
+      "sources": [
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p5",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p5",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p5",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p4",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p5"
+      ]
+    },
+    {
+      "question": "What is positional encoding in the Transformer?",
+      "ground_truth": "Since the Transformer contains no recurrence or convolution, positional encodings are added to the input embeddings to inject information about token positions. The paper uses sine and cosine functions of different frequencies: PE(pos, 2i) = sin(pos/10000^(2i/dmodel)) and PE(pos, 2i+1) = cos(pos/10000^(2i/dmodel)).",
+      "generated_answer": "**Positional encoding** is a method for injecting information about the order of tokens into a Transformer.  \nAt the bottom of each encoder and decoder stack, the model adds a *positional encoding vector* to each token\u2019s input embedding. The encoding has the same dimensionality as the embeddings (`d_model`) so that the two can be summed.\n\nIn the original Transformer paper the authors use a **fixed sinusoidal** positional encoding.  \nFor a token at position `pos` and dimension index `i` the components are defined as  \n\n\\[\n\\text{PE}(pos, 2i)   = \\sin\\!\\left(\\frac{pos}{10000^{\\,2i/d_{\\text{model}}}}\\right), \\qquad\n\\text{PE}(pos, 2i+1) = \\cos\\!\\left(\\frac{pos}{10000^{\\,2i/d_{\\text{model}}}}\\right).\n\\]\n\nThus each dimension of the positional encoding corresponds to a sinusoid whose wavelength follows a geometric progression from \\(2\\pi\\) to \\(10000\\cdot 2\\pi\\). This design allows the Transformer to capture relative and absolute position information without requiring learned position parameters.\n\n> The paper notes that many choices of positional encodings are possible, including learned and fixed versions.  \n\n[Source: Attention is All You Need (Transformers \u2014 the foundation of everything).pdf, pages 6\u20117]",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer provides a detailed, fully accurate explanation of positional encoding in the Transformer, perfectly aligning with the ground truth formula and context.",
+      "sources": [
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p6",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p6",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p6",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p6",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p6",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p8",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p6",
+        "BERT (Bidirectional language understanding).pdf p4"
+      ]
+    },
+    {
+      "question": "What is Retrieval Augmented Generation (RAG)?",
+      "ground_truth": "RAG models combine pre-trained parametric memory (a seq2seq model) with non-parametric memory (a dense vector index of Wikipedia accessed with a neural retriever) for language generation. The model retrieves top-K documents for a query and uses them as context to generate the output.",
+      "generated_answer": "Retrieval\u2011Augmented Generation (RAG) is a fine\u2011tuning recipe that turns a pre\u2011trained seq2seq transformer into a model that can look up external text during decoding.  \nIt equips the parametric memory of the transformer (the usual neural weights) with a **non\u2011parametric memory**\u2014a retriever that fetches relevant passages from a large corpus. The model then conditions its generation on both the internal representation and the retrieved documents, blending the flexibility of closed\u2011book (purely parametric) generation with the factual grounding of open\u2011book, retrieval\u2011based approaches\u30101, page\u202f1\u3011\u30102, page\u202f2\u3011\u30105, page\u202f2\u3011.",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately explains Retrieval Augmented Generation by correctly defining parametric and non-parametric memory and detailing how retrieved passages are used to condition text generation.",
+      "sources": [
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p1",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p2",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p1",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p2",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p9",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10"
+      ]
+    },
+    {
+      "question": "What retriever does the RAG paper use?",
+      "ground_truth": "The RAG paper uses Dense Passage Retriever (DPR) as its retrieval component, which follows a bi-encoder architecture where both document and query encoders are based on BERT BASE. It uses Maximum Inner Product Search (MIPS) to find the top-K documents.",
+      "generated_answer": "The RAG paper uses a dense retriever based on **DPR (Dense Passage Retrieval)**.  \nThe RAG retriever is initialized with the DPR retriever, which is trained with retrieval\u2011supervision on Natural Questions and TriviaQA.  \n\n[source: RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf, Page\u202f5]",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer correctly identifies DPR as the retriever used in the RAG paper and directly answers the question accurately.",
+      "sources": [
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p17",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p9",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p7",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p2"
+      ]
+    },
+    {
+      "question": "What are the two RAG model variants proposed in the paper?",
+      "ground_truth": "The paper proposes two RAG variants: RAG-Sequence, which uses the same retrieved document to generate the complete output sequence, and RAG-Token, which can use a different retrieved document for each output token, allowing content from several documents to be combined.",
+      "generated_answer": "The paper proposes two variants of the Retrieval\u2011Augmented Generation (RAG) architecture:\n\n1. **RAG\u2011Sequence** \u2013 uses the same retrieved passage(s) to condition the entire generated sequence.  \n2. **RAG\u2011Token** \u2013 allows each generated token to be conditioned on a potentially different retrieved passage.\n\nThese two formulations are described in the paper as the only two RAG variants. [2] (page\u202f1) outlines the two formulations; [3] (page\u202f3) details the RAG\u2011Sequence model; and [7] (page\u202f4) discusses the RAG\u2011Token model.",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately identifies and explains both RAG-Sequence and RAG-Token variants as described in the ground truth.",
+      "sources": [
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p1",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p3",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p2",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p6",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p4",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p3"
+      ]
+    },
+    {
+      "question": "What generator does RAG use?",
+      "ground_truth": "RAG uses BART-large as its generator component, a pre-trained seq2seq transformer with 400M parameters. To combine the input with retrieved content, the input and retrieved passage are simply concatenated before being fed to BART.",
+      "generated_answer": "RAG uses a BART\u2010based seq2seq model as its generator\u3010source: RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf, Page 6\u3011",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer directly and accurately identifies the BART-based seq2seq model as the generator, aligning perfectly with the ground truth.",
+      "sources": [
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p3",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p6",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p7"
+      ]
+    },
+    {
+      "question": "What BLEU score did the Transformer achieve on WMT 2014 English-to-German translation?",
+      "ground_truth": "The big Transformer model achieved 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results including ensembles by over 2 BLEU.",
+      "generated_answer": "The Transformer achieved a BLEU score of **28.4** on the WMT\u202f2014 English\u2011to\u2011German translation task\u30101\u3011.",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately provides the exact BLEU score of 28.4 stated in the ground truth and directly answers the user's question.",
+      "sources": [
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p1",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p1",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p8",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p8",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p8",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p1",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p8",
+        "Attention is All You Need (Transformers \u2014 the foundation of everything).pdf p8"
+      ]
+    },
+    {
+      "question": "What datasets were used to evaluate RAG on open-domain question answering?",
+      "ground_truth": "RAG was evaluated on four open-domain QA datasets: Natural Questions (NQ), TriviaQA (TQA), WebQuestions (WQ), and CuratedTrec (CT), achieving state-of-the-art results on all four.",
+      "generated_answer": "The RAG paper evaluated its open\u2011domain question\u2011answering models on four standard QA benchmarks:\n\n1. **Natural Questions** \u2013 a large\u2011scale dataset of real user queries with Wikipedia passages as context.  \n2. **WebQuestions** \u2013 a collection of factoid questions derived from search queries, with short answer strings.  \n3. **CuratedTREC** \u2013 a question answering benchmark built from the TREC QA track with curated passages.  \n4. **TQA (TriviaQA)** \u2013 a factoid QA dataset of questions from trivia games and Wikipedia passages; the evaluation used the T5\u2011comparable split of this dataset.\n\nThese datasets are explicitly listed as the open\u2011domain QA tasks on which RAG\u2019s performance is reported [1][2][3][7].",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately identifies all four datasets mentioned in the ground truth and directly answers the question with additional helpful detail.",
+      "sources": [
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p2",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p17",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p4",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p4",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p7"
+      ]
+    },
+    {
+      "question": "What masking rate does BERT use for the Masked Language Model pre-training task?",
+      "ground_truth": "BERT randomly masks 15% of all WordPiece tokens in each sequence. Of the chosen tokens, 80% are replaced with the [MASK] token, 10% are replaced with a random token, and 10% are kept unchanged.",
+      "generated_answer": "BERT masks **15\u202f% of all WordPiece tokens** during the masked\u2011language\u2011model (MLM) pre\u2011training task.  \n[6]\u202fSource: *BERT (Bidirectional language understanding).pdf*, page\u202f12  \n[8]\u202fSource: *BERT (Bidirectional language understanding).pdf*, page\u202f4",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer accurately identifies the 15% masking rate requested by the question and is completely consistent with the ground truth.",
+      "sources": [
+        "BERT (Bidirectional language understanding).pdf p16",
+        "BERT (Bidirectional language understanding).pdf p2",
+        "BERT (Bidirectional language understanding).pdf p16",
+        "BERT (Bidirectional language understanding).pdf p16",
+        "BERT (Bidirectional language understanding).pdf p16",
+        "BERT (Bidirectional language understanding).pdf p12",
+        "BERT (Bidirectional language understanding).pdf p1",
+        "BERT (Bidirectional language understanding).pdf p4"
+      ]
+    },
+    {
+      "question": "What is the main advantage of RAG over purely parametric models?",
+      "ground_truth": "Unlike parametric models that cannot easily expand or revise their memory and may produce hallucinations, RAG combines parametric and non-parametric memory so knowledge can be directly revised and expanded, accessed knowledge can be inspected and interpreted, and the non-parametric memory can be replaced to update world knowledge without any retraining.",
+      "generated_answer": "The primary benefit of Retrieval\u2011Augmented Generation (RAG) compared with purely parametric models is that its non\u2011parametric memory can be updated on the fly.  \nBecause RAG retrieves documents from an external index, new information can be added to or changed in that index at test time without retraining the model, whereas parametric\u2011only models such as T5 or BART would require additional fine\u2011tuning to incorporate new knowledge.  \n\n[source: RAG Paper (Lewis et al.), Page\u202f7]",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The generated answer directly addresses the question and is completely consistent with the ground truth, highlighting that RAG's non-parametric memory can be updated without retraining.",
+      "sources": [
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p1",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p1",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p1",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p2",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p7",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p5",
+        "RAG Paper (Lewis et al. \u2014 the paper that introduced RAG).pdf p10"
+      ]
+    }
+  ]
+}
